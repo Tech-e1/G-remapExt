@@ -1,6 +1,3 @@
-# G-remapExt
-Chromium Extension for G-remap  (your trusted privacy Gmaps redirect)
-
 
 ![Project Image](project-image-url)
 # G-remapExt
@@ -30,7 +27,9 @@ Javascript powered parsing the standard Google Maps location structure is transl
 
 ## Dependencies
 A chromium based browser\
-Extensions Developer mode enabled\
+Extensions Developer mode enabled
+
+[Back To The Top](#read-me-template)
 
 ---
 
@@ -38,7 +37,7 @@ Extensions Developer mode enabled\
 Git clone this repo\
 unzip\
 Go to extensions tab within the browser\
-select load unpacked\
+select load unpacked
 
 [Back To The Top](#read-me-template)
 
@@ -50,9 +49,6 @@ Right click any google location/place link\
 Click on Redirect to Brave Maps\
 
 NOTE:Google directions are still in development. This in likely to work.
-
----
-## References
 [Back To The Top](#read-me-template)
 
 ---
