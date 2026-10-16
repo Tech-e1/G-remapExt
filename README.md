@@ -46,9 +46,9 @@ select load unpacked
 ## How To Use
 
 Right click any google location/place link\
-Click on Redirect to Brave Maps\
+Click on Redirect to Brave Maps
 
-NOTE:Google directions are still in development. This in likely to work.
+NOTE:Google directions are still in development. This isnt likely to work.
 [Back To The Top](#read-me-template)
 
 ---
