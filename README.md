@@ -35,7 +35,6 @@ Extensions Developer mode enabled
 
 #### Installation
 Git clone this repo\
-unzip\
 Go to extensions tab within the browser\
 select load unpacked
 
