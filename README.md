@@ -20,6 +20,23 @@ You're sections headers will be used to reference location of destination.
 
 Javascript powered parsing the standard Google Maps location structure is translated into the current (10/15/2026) Brave Maps format.
 
+Google Maps URLs that the  are built to match:
+
+1. Place — matches /\/maps\/place\/([^/@?]+)/
+
+https://www.google.com/maps/place/Central+Park/@40.7829,-73.9654,15z
+
+→ Extracted query: Central Park
+
+2. Search — matches /\/maps\/search\/([^/@?]+)/
+
+https://www.google.com/maps/search/coffee+shops+near+me/@40.7128,-74.0060,14z
+
+→ Extracted query: coffee shops near me
+
+3. Directions — matches /\/maps\/dir\/([^/]+)\/([^/@?]+)/
+
+https://www.google.com/maps/dir/Brooklyn+Museum/Central+Park+Zoo/@40.7,-73.96,13z
 
 [Back To The Top](#read-me-template)
 
