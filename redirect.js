@@ -86,37 +86,29 @@
     }
   }
 
-  // Main redirect logic
-  var currentUrl = location.href;
-  console.log("[GMaps→Brave] Current URL:", currentUrl);
+ // Main redirect logic
+var currentUrl = location.href;
+console.log("[GMaps→Brave] Current URL:", currentUrl);
 
-  // Only redirect if we haven't already been redirected
-  if (!currentUrl.includes("search.brave.com") && !sessionStorage.getItem("gmaps2brave_done")) {
-    var braveUrl = parseGoogleMaps(currentUrl);
-    
-    if (braveUrl) {
-      console.log("[GMaps→Brave] Redirecting to:", braveUrl);
-      sessionStorage.setItem("gmaps2brave_done", "1");
-      
-      // Try multiple redirect methods
-      setTimeout(function() {
-        try {
-          location.replace(braveUrl);
-          console.log("[GMaps→Brave] Used location.replace()");
-        } catch(e1) {
-          try {
-            location.href = braveUrl;
-            console.log("[GMaps→Brave] Used location.href");
-          } catch(e2) {
-            console.error("[GMaps→Brave] Both redirect methods failed:", e1, e2);
-          }
-        }
-      }, 100);
-    } else {
-      console.log("[GMaps→Brave] No Brave URL generated");
+var braveUrl = parseGoogleMaps(currentUrl);
+
+if (braveUrl) {
+  console.log("[GMaps→Brave] Redirecting to:", braveUrl);
+  setTimeout(function() {
+    try {
+      location.replace(braveUrl);
+      console.log("[GMaps→Brave] Used location.replace()");
+    } catch(e1) {
+      try {
+        location.href = braveUrl;
+        console.log("[GMaps→Brave] Used location.href");
+      } catch(e2) {
+        console.error("[GMaps→Brave] Both redirect methods failed:", e1, e2);
+      }
     }
-  } else {
-    console.log("[GMaps→Brave] Already on Brave Maps or previously redirected, skipping.");
-  }
+  }, 100);
+} else {
+  console.log("[GMaps→Brave] No Brave URL generated");
+}
 
 })();
